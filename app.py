@@ -8,6 +8,7 @@ from docx.enum.text import WD_COLOR_INDEX
 
 
 app = Flask(__name__)
+socketio = SocketIO(app)
 app.secret_key = 'supersecretkey'  # Replace with a real secret key
 socketio = SocketIO(app)
 logging.basicConfig(level=logging.DEBUG)
