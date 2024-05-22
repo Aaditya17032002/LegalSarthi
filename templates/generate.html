@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-style-mode" content="1"> <!-- 0 == light, 1 == dark -->
+
+    <title>Home || Legal Sarthi</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='assets/images/android-chrome-512x512.png') }}">
+    <!-- CSS ============================================ -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/vendor/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/plugins/fontawesome-all.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/plugins/feature.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/plugins/animation.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/plugins/slick.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/plugins/slick-theme.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/plugins/bootstrap-select.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/plugins/prism.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css') }}">
+
+</head>
+
+<body>
+    <main class="page-wrapper">
+        <!-- Start Header Area  -->
+        <header class="rainbow-header header-default header-transparent header-sticky">
+            <div class="container position-relative">
+                <div class="row align-items-center row--0">
+                    <div class="col-lg-2 col-md-6 col-6">
+                        <div class="logo">
+                            <a href='index.html'>
+                                <img class="logo-light" src="{{ url_for('static', filename='assets/images/Legal-Sarthi_LOGO.png') }}" alt="ChatBot Logo">
+
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-8 d-none d-lg-block">
+                        <nav class="mainmenu-nav d-none d-lg-flex justify-content-center">
+                            <ul class="mainmenu">
+    <li><a href="{{ url_for('home') }}">Home</a></li>
+    <li><a href="{{ url_for('show_form') }}">Generate</a></li>
+    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+</ul>
+
+                        </nav>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 col-6 position-static">
+                        <div class="header-right">
+
+                            <!-- Start Header Btn  -->
+                            <div class="header-btn">
+                                <a class='rainbow-gradient-btn' href='#' target='_blank'><span>Get Start</span></a>
+                            </div>
+                            <!-- End Header Btn  -->
+
+                            <!-- Start Mobile-Menu-Bar -->
+                            <div class="mobile-menu-bar ml--5 d-flex justify-content-end d-lg-none">
+                                <div class="hamberger">
+                                    <button class="hamberger-button">
+                                        <i class="fa-sharp fa-regular fa-bars"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- Start Mobile-Menu-Bar -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- End Header Area  -->
+        <div class="popup-mobile-menu">
+            <div class="inner-popup">
+                <div class="header-top">
+                    <div class="logo">
+                        <a href='index.html'>
+                            <img class="logo-light" src="{{ url_for('static', filename='assets/images/Legal-Sarthi_LOGO.png') }}" alt="ChatBot Logo">
+
+                        </a>
+                    </div>
+                    <div class="close-menu">
+                        <button class="close-button">
+                            <i class="fa-sharp fa-regular fa-x"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <ul class="mainmenu">
+                        <li><a href='index.html'>Home</a></li>
+                        <li><a href='generate.html'>Generate</a></li>
+                        <li><a href='contact.html'>Contact</a></li>
+                    </ul>
+
+                </div>
+
+                <!-- Start Header Btn  -->
+                <div class="header-btn d-block d-md-none">
+                    <a class='btn-default @@btnClass' href='generate.html' target='_blank'>Get Started Free</a>
+                </div>
+                <!-- End Header Btn  -->
+            </div>
+        </div>
+
+        <!-- Imroz Preloader -->
+        <div class="preloader">
+            <div class='loader'>
+                <div class='circle'></div>
+                <div class='circle'></div>
+                <div class='circle'></div>
+                <div class='circle'></div>
+                <div class='circle'></div>
+            </div>
+        </div>
+
+<!-- Main content -->
+<div class="rbt-main-content mb--0">
+    <div class="rbt-daynamic-page-content center-width">
+
+        <!-- Dashboard Center Content -->
+        <div class="rbt-dashboard-content">
+            <div class="content-page pb--50">
+                <div class="chat-box-list">
+
+                    <!-- AiWaveSettings Settings -->
+                    <div class="single-settings-box profile-details-box overflow-hidden">
+                        <div class="profile-details-tab">
+                            <div class="advance-tab-button mb--30">
+                                <ul class="nav nav-tabs tab-button-style-2 justify-content-start" id="settinsTab-4" role="tablist">
+                                    <li role="presentation">
+                                        <a href="#" class="tab-button active" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" role="tab" aria-controls="profile" aria-selected="true">
+                                            <span class="title">Rent Agreement</span>
+                                        </a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a href="#" class="tab-button" id="password-tab" data-bs-toggle="tab" data-bs-target="#password" role="tab" aria-controls="password" aria-selected="false">
+                                            <span class="title">NDA</span>
+                                        </a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a href="#" class="tab-button" id="del-account-tab" data-bs-toggle="tab" data-bs-target="#delaccount" role="tab" aria-controls="delaccount" aria-selected="false">
+                                            <span class="title">Power of Attorney</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="tab-content">
+                                <div class="tab-pane fade active show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                    <!-- Start Profile Row  -->
+                                    <form method="post" action="{{ url_for('generate_document') }}" class="rbt-profile-row rbt-default-form row row--15">
+                                        <input type="hidden" name="doc_type" value="{{ doc_type }}">
+                                    
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <div class="form-group">
+                                                <label for="CityState">City, State:</label>
+                                                <select id="CityState" name="CityState">
+                                                    <option value="Ahmedabad, Gujarat">Ahmedabad, Gujarat</option>
+                                                    <option value="Surat, Gujarat">Surat, Gujarat</option>
+                                                    <option value="Vadodara, Gujarat">Vadodara, Gujarat</option>
+                                                    <option value="Rajkot, Gujarat">Rajkot, Gujarat</option>
+                                                    <option value="Bhavnagar, Gujarat">Bhavnagar, Gujarat</option>
+                                                    <option value="Jamnagar, Gujarat">Jamnagar, Gujarat</option>
+                                                    <option value="Gandhinagar, Gujarat">Gandhinagar, Gujarat</option>
+                                                    <option value="Junagadh, Gujarat">Junagadh, Gujarat</option>
+                                                    <option value="Anand, Gujarat">Anand, Gujarat</option>
+                                                    <option value="Navsari, Gujarat">Navsari, Gujarat</option>
+                                                    <option value="Morbi, Gujarat">Morbi, Gujarat</option>
+                                                    <option value="Nadiad, Gujarat">Nadiad, Gujarat</option>
+                                                    <option value="Surendranagar, Gujarat">Surendranagar, Gujarat</option>
+                                                    <option value="Bharuch, Gujarat">Bharuch, Gujarat</option>
+                                                    <option value="Mehsana, Gujarat">Mehsana, Gujarat</option>
+                                                    <option value="Bhuj, Gujarat">Bhuj, Gujarat</option>
+                                                    <option value="Porbandar, Gujarat">Porbandar, Gujarat</option>
+                                                    <option value="Palanpur, Gujarat">Palanpur, Gujarat</option>
+                                                    <option value="Valsad, Gujarat">Valsad, Gujarat</option>
+                                                    <option value="Vapi, Gujarat">Vapi, Gujarat</option>
+                                                    <option value="Gondal, Gujarat">Gondal, Gujarat</option>
+                                                    <option value="Veraval, Gujarat">Veraval, Gujarat</option>
+                                                    <option value="Godhra, Gujarat">Godhra, Gujarat</option>
+                                                    <option value="Patan, Gujarat">Patan, Gujarat</option>
+                                                    <option value="Dahod, Gujarat">Dahod, Gujarat</option>
+                                                    <option value="Botad, Gujarat">Botad, Gujarat</option>
+                                                    <option value="Amreli, Gujarat">Amreli, Gujarat</option>
+                                                    <option value="Deesa, Gujarat">Deesa, Gujarat</option>
+                                                    <option value="Jetpur, Gujarat">Jetpur, Gujarat</option>
+                                                    <option value="Chhota Udaipur, Gujarat">Chhota Udaipur, Gujarat</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                    
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <div class="form-group">
+                                                <label for="DateMonthYear">Date, Month, Year:</label>
+                                                <input type="date" id="DateMonthYear" name="DateMonthYear" placeholder="e.g., 2024-05-25">
+                                            </div>
+                                        </div>
+                                    
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <div class="form-group">
+                                                <label for="LandlordName">Landlord Name:</label>
+                                                <input type="text" id="LandlordName" name="LandlordName" placeholder="e.g., John Doe">
+                                            </div>
+                                        </div>
+                                    
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <div class="form-group">
+                                                <label for="LandlordAddress">Landlord Address:</label>
+                                                <input type="text" id="LandlordAddress" name="LandlordAddress" placeholder="LandlordAddress">
+                                            </div>
+                                        </div>
+                                    
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <div class="form-group">
+                                                <label for="TenantName">Tenant Name:</label>
+                                                <input type="text" id="TenantName" name="TenantName" placeholder="e.g., Jane Smith">
+                                            </div>
+                                        </div>
+                                    
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <div class="form-group">
+                                                <label for="TenantAddress">Tenant Address:</label>
+                                                <input type="text" id="TenantAddress" name="TenantAddress" placeholder="Tenant Address">
+                                            </div>
+                                        </div>
+                                    
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <div class="form-group">
+                                                <label for="PropertyAddress">Property Address:</label>
+                                                <input type="text" id="PropertyAddress" name="PropertyAddress" placeholder="e.g., 123 Main St">
+                                            </div>
+                                        </div>
+                                    
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <div class="form-group">
+                                                <label for="PropertyCategory">Property Category:</label>
+                                                <select id="PropertyCategory" name="PropertyCategory">
+                                                    <option value="">Select property category</option>
+                                                    <option value="Residential">Residential</option>
+                                                    <option value="Commercial">Commercial</option>
+                                                    <option value="Industrial">Industrial</option>
+                                                    <option value="Mixed-use">Mixed-use</option>
+                                                    <option value="Retail">Retail</option>
+                                                    <option value="Office">Office</option>
+                                                    <option value="Warehouse">Warehouse</option>
+                                                    <option value="Vacant land">Vacant land</option>
+                                                    <option value="Agricultural">Agricultural</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        
+                                    
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <div class="form-group">
+                                                <label for="PropertyDetails">Property Details:</label>
+                                                <select id="PropertyDetails" name="PropertyDetails">
+                                                    <option value="">Select property details</option>
+                                                    <option value="1 bedroom, 1 bath">1 bedroom, 1 bath</option>
+                                                    <option value="2 bedrooms, 1 bath">2 bedrooms, 1 bath</option>
+                                                    <option value="2 bedrooms, 2 baths">2 bedrooms, 2 baths</option>
+                                                    <option value="3 bedrooms, 2 baths">3 bedrooms, 2 baths</option>
+                                                    <option value="3 bedrooms, 3 baths">3 bedrooms, 3 baths</option>
+                                                    <option value="4 bedrooms, 2 baths">4 bedrooms, 2 baths</option>
+                                                    <option value="4 bedrooms, 3 baths">4 bedrooms, 3 baths</option>
+                                                    <option value="4 bedrooms, 4 baths">4 bedrooms, 4 baths</option>
+                                                    <option value="5 bedrooms, 3 baths">5 bedrooms, 3 baths</option>
+                                                    <option value="5 bedrooms, 4 baths">5 bedrooms, 4 baths</option>
+                                                    <option value="5+ bedrooms, 4+ baths">5+ bedrooms, 4+ baths</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        
+                                    
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <div class="form-group">
+                                                <label for="LeaseTerm">Lease Term:</label>
+                                                <input type="text" id="LeaseTerm" name="LeaseTerm" placeholder="e.g., 12 months" onblur="appendMonths(this)">
+                                            </div>
+                                        </div>
+                                        
+                                    
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <div class="form-group">
+                                                <label for="LeaseStartDate">Lease Start Date:</label>
+                                                <input type="date" id="LeaseStartDate" name="LeaseStartDate" placeholder="e.g., 2024-06-01">
+                                            </div>
+                                        </div>
+                                    
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <div class="form-group">
+                                                <label for="MonthlyRental">Monthly Rental (in Rs):</label>
+                                                <div class="input-group">
+                                                    <input type="number" id="MonthlyRental" name="MonthlyRental" step="0.01" placeholder="e.g., 1000.00">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <div class="form-group">
+                                                <label for="RentalDeposit">Rental Deposit (in Rs):</label>
+                                                <div class="input-group">
+                                                    <input type="number" id="RentalDeposit" name="RentalDeposit" step="0.01" placeholder="e.g., 1500.00">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    
+                                        <div class="col-12 custom-btn">
+                                            <div class="form-group mb--0">
+                                                <button type="submit" class="btn-default">Generate Document</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    
+                                    <!-- End Profile Row  -->
+                                </div>
+
+                                <div class="tab-pane fade" id="password" role="tabpanel" aria-labelledby="password-tab">
+                                    <!-- Start Profile Row  -->
+                                    <div class="rbt-profile-row rbt-default-form row row--15 justify-content-center">
+                                        <div class="col-12 text-center">
+                                            <div class="form-group">
+                                                <h2>Coming soon...</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Profile Row  -->
+                                </div>
+                                
+                                <div class="tab-pane fade" id="delaccount" role="tabpanel" aria-labelledby="del-account-tab">
+                                    <!-- Start Profile Row  -->
+                                    <div class="rbt-profile-row rbt-default-form row row--15 justify-content-center">
+                                        <div class="col-12 text-center">
+                                            <div class="form-group">
+                                                <h2>Coming soon...</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Profile Row  -->
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+        <!-- Start Footer Area  -->
+        <footer class="rainbow-footer footer-style-default footer-style-3 position-relative">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div class="rainbow-footer-widget">
+                                <div class="logo footer-logo">
+                                    <a href='index.html'>
+                                        <img class="logo-light" src="{{ url_for('static', filename='assets/images/Legal-Sarthi_LOGO.png') }}" alt="ChatBot Logo">
+
+                                    </a>
+                                </div>
+                                <p class="b1 desc-text">It has long been known that a reader's <br> attention will be
+                                    diverted from </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-sm-6 col-12">
+                            <div class="rainbow-footer-widget">
+                                <div class="widget-menu-bottom">
+                                    <h4 class="title">Quick Links</h4>
+                                    <div class="inner">
+                                        <ul class="footer-link link-hover">
+                                            <li><a href="index.html">Home</a></li>
+                                            <li><a href='generate.html'>Generate</a></li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                            <div class="rainbow-footer-widget">
+                                <div class="widget-menu-top">
+                                    <h4 class="title">Services</h4>
+                                    <div class="inner">
+                                        <li><a href='generate.html'>Rent Agreement Generator</a></li>
+                                        <li><a href='#'>Will Power Generator</a></li>
+                                        <li><a href='#'>Power of Attorney Generator</a>
+                                        </li>
+                                        <li><a href='#'>Any Other Legal Document
+                                                Generator</a></li>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                            <div class="rainbow-footer-widget">
+                                <div class="widget-menu-top">
+                                    <h4 class="title">Contact</h4>
+                                    <div class="inner">
+                                        <ul class="footer-link contact-link">
+                                            <li><i class="contact-icon fa-regular fa-location-dot"></i><a
+                                                    href="#">Gotri, Vadodara - 390021</a></li>
+                                            <li><i class="contact-icon fa-sharp fa-regular fa-envelope"></i><a
+                                                    href="#">legalsarthi@gmail.com</a></li>
+                                            <li><i class="contact-icon fa-regular fa-phone"></i><a
+                                                    href="tel:919106023997">+91 9106023997</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer Area  -->
+        <!-- Start Copy Right Area  -->
+        <div class="copyright-area copyright-style-one">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-8 col-sm-12 col-12">
+                        <div class="copyright-left">
+                            <ul class="ft-menu link-hover">
+                                <li>
+                                    Designed & Developed by <a href='https://neuralbee.tech/'
+                                        target="_blank">NeuralBee</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-4 col-sm-12 col-12">
+                        <div class="copyright-right text-center text-lg-end">
+                            <p class="copyright-text">Copyright © 2024 <a href="#"
+                                    class="btn-read-more"><span>LegalSarthi</span></a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Copy Right Area  -->
+        <div class="rbt-progress-parent">
+            <svg class="rbt-back-circle svg-inner" width="100%" height="100%" viewBox="-1 -1 102 102">
+                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+            </svg>
+        </div>
+    </main>
+    <!-- All Scripts  -->
+
+    <!-- JS
+============================================ -->
+    <script src="{{ url_for('static', filename='assets/js/vendor/modernizr.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/vendor/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/vendor/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/vendor/waypoint.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/vendor/wow.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/vendor/counterup.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/vendor/sal.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/vendor/slick.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/vendor/text-type.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/vendor/prism.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/vendor/jquery.style.swicher.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/vendor/bootstrap-select.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/vendor/backto-top.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/vendor/js.cookie.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/vendor/jquery-one-page-nav.js') }}"></script>
+<!-- Main JS -->
+<script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+
+    <script>
+        function appendMonths(input) {
+            // Check if the input is numeric or empty, and doesn't already contain "months"
+            if (input.value && /^\d+$/.test(input.value) && !input.value.includes("months")) {
+                input.value += " months"; // Append "months" to the input value
+            }
+        }
+        </script>
+        <script>
+            function appendCurrency() {
+                var monthlyRental = document.getElementById('MonthlyRental');
+                var rentalDeposit = document.getElementById('RentalDeposit');
+            
+                if (monthlyRental.value && !monthlyRental.value.includes("Rs")) {
+                    monthlyRental.value = "Rs " + monthlyRental.value;
+                }
+                if (rentalDeposit.value && !rentalDeposit.value.includes("Rs")) {
+                    rentalDeposit.value = "Rs " + rentalDeposit.value;
+                }
+            }
+            
+            // You can call this function when form is submitted or when fields lose focus
+            document.getElementById('MonthlyRental').addEventListener('blur', appendCurrency);
+            document.getElementById('RentalDeposit').addEventListener('blur', appendCurrency);
+            </script>
+            
+
+</body>
+
+</html>

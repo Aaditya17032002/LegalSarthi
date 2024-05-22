@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fill in the Document</title>
+</head>
+<body>
+    <h1>Fill in the Rental Agreement</h1>
+    <form method="post" action="{{ url_for('generate_document') }}">
+        <input type="hidden" name="doc_type" value="{{ doc_type }}">
+        
+        <label for="CityState">City, State:</label>
+        <input type="text" id="CityState" name="CityState">
+        
+        <label for="DateMonthYear">Date, Month, Year:</label>
+        <input type="date" id="DateMonthYear" name="DateMonthYear">
+        
+        <label for="LandlordName">Landlord Name:</label>
+        <input type="text" id="LandlordName" name="LandlordName">
+        
+        <label for="LandlordAddress">Landlord Address:</label>
+        <input type="text" id="LandlordAddress" name="LandlordAddress">
+        
+        <label for="TenantName">Tenant Name:</label>
+        <input type="text" id="TenantName" name="TenantName">
+        
+        <label for="TenantAddress">Tenant Address:</label>
+        <input type="text" id="TenantAddress" name="TenantAddress">
+        
+        <label for="PropertyAddress">Property Address:</label>
+        <input type="text" id="PropertyAddress" name="PropertyAddress">
+        
+        <label for="PropertyCategory">Property Category:</label>
+        <input type="text" id="PropertyCategory" name="PropertyCategory">
+        
+        <label for="PropertyDetails">Property Details:</label>
+        <input type="text" id="PropertyDetails" name="PropertyDetails">
+        
+        <label for="LeaseTerm">Lease Term:</label>
+        <input type="text" id="LeaseTerm" name="LeaseTerm">
+        
+        <label for="LeaseStartDate">Lease Start Date:</label>
+        <input type="date" id="LeaseStartDate" name="LeaseStartDate">
+        
+        <label for="MonthlyRental">Monthly Rental:</label>
+        <input type="number" id="MonthlyRental" name="MonthlyRental" step="0.01">
+        
+        <label for="RentalDeposit">Rental Deposit:</label>
+        <input type="number" id="RentalDeposit" name="RentalDeposit" step="0.01">
+        
+        <label for="StartMeterReading">Starting Meter Reading:</label>
+        <input type="number" id="StartMeterReading" name="StartMeterReading">
+        
+        <label for="SquareFeet">Square Feet:</label>
+        <input type="number" id="SquareFeet" name="SquareFeet">
+        
+        <label for="LessorName">Lessor Name:</label>
+        <input type="text" id="LessorName" name="LessorName">
+        
+        <label for="LessorAddress1">Lessor Address Line 1:</label>
+        <input type="text" id="LessorAddress1" name="LessorAddress1">
+        
+        <label for="LessorAddress2">Lessor Address Line 2:</label>
+        <input type="text" id="LessorAddress2" name="LessorAddress2">
+        
+        <label for="LessorCityStatePin">Lessor City, State, Pin Code:</label>
+        <input type="text" id="LessorCityStatePin" name="LessorCityStatePin">
+        
+        <label for="LesseeName">Lessee Name:</label>
+        <input type="text" id="LesseeName" name="LesseeName">
+        
+        <label for="LesseeAddress1">Lessee Address Line 1:</label>
+        <input type="text" id="LesseeAddress1" name="LesseeAddress1">
+        
+        <label for="LesseeAddress2">Lessee Address Line 2:</label>
+        <input type="text" id="LesseeAddress2" name="LesseeAddress2">
+        
+        <label for="LesseeCityStatePin">Lessee City, State, Pin Code:</label>
+        <input type="text" id="LesseeCityStatePin" name="LesseeCityStatePin">
+        
+        <label for="WitnessOneNameAddress">Witness One Name & Address:</label>
+        <input type="text" id="WitnessOneNameAddress" name="WitnessOneNameAddress">
+        
+        <label for="WitnessTwoNameAddress">Witness Two Name & Address:</label>
+        <input type="text" id="WitnessTwoNameAddress" name="WitnessTwoNameAddress">
+        
+        <button type="submit">Generate Document</button>
+    </form>
+</body>
+</html>

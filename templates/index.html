@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-style-mode" content="1"> <!-- 0 == light, 1 == dark -->
+
+    <title>Home || Legal Sarthi</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='assets/images/android-chrome-512x512.png') }}">
+    <!-- CSS ============================================ -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/vendor/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/plugins/fontawesome-all.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/plugins/feature.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/plugins/animation.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/plugins/slick.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/plugins/slick-theme.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/plugins/bootstrap-select.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/plugins/prism.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css') }}">
+
+</head>
+
+<body>
+    <main class="page-wrapper">
+        <!-- Start Header Area  -->
+        <header class="rainbow-header header-default header-transparent header-sticky">
+            <div class="container position-relative">
+                <div class="row align-items-center row--0">
+                    <div class="col-lg-2 col-md-6 col-6">
+                        <div class="logo">
+                            <a href='index.html'>
+                                <img class="logo-light" src="{{ url_for('static', filename='assets/images/Legal-Sarthi_LOGO.png') }}" alt="ChatBot Logo">
+
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-8 d-none d-lg-block">
+                        <nav class="mainmenu-nav d-none d-lg-flex justify-content-center">
+                            <ul class="mainmenu">
+    <li><a href="{{ url_for('home') }}">Home</a></li>
+    <li><a href="{{ url_for('show_form') }}">Generate</a></li>
+    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+</ul>
+
+                        </nav>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 col-6 position-static">
+                        <div class="header-right">
+
+                            <!-- Start Header Btn  -->
+                            <div class="header-btn">
+                                <a class='rainbow-gradient-btn' href='#' target='_blank'><span>Get Start</span></a>
+                            </div>
+                            <!-- End Header Btn  -->
+
+                            <!-- Start Mobile-Menu-Bar -->
+                            <div class="mobile-menu-bar ml--5 d-flex justify-content-end d-lg-none">
+                                <div class="hamberger">
+                                    <button class="hamberger-button">
+                                        <i class="fa-sharp fa-regular fa-bars"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- Start Mobile-Menu-Bar -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- End Header Area  -->
+        <div class="popup-mobile-menu">
+            <div class="inner-popup">
+                <div class="header-top">
+                    <div class="logo">
+                        <a href='index.html'>
+                            <img class="logo-light" src="{{ url_for('static', filename='assets/images/Legal-Sarthi_LOGO.png') }}" alt="ChatBot Logo">
+
+                        </a>
+                    </div>
+                    <div class="close-menu">
+                        <button class="close-button">
+                            <i class="fa-sharp fa-regular fa-x"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <ul class="mainmenu">
+                        <li><a href='index.html'>Home</a></li>
+                        <li><a href='generate.html'>Generate</a></li>
+                        <li><a href='contact.html'>Contact</a></li>
+                    </ul>
+
+                </div>
+
+                <!-- Start Header Btn  -->
+                <div class="header-btn d-block d-md-none">
+                    <a class='btn-default @@btnClass' href='generate.html' target='_blank'>Get Started Free</a>
+                </div>
+                <!-- End Header Btn  -->
+            </div>
+        </div>
+
+        <!-- Imroz Preloader -->
+        <div class="preloader">
+            <div class='loader'>
+                <div class='circle'></div>
+                <div class='circle'></div>
+                <div class='circle'></div>
+                <div class='circle'></div>
+                <div class='circle'></div>
+            </div>
+        </div>
+
+        <!-- Start Slider Area  -->
+        <div class="slider-area slider-style-1 variation-default slider-bg-image bg-banner1 slider-bg-shape"
+            data-black-overlay="1">
+            <!-- <div class="bg-blend-top bg_dot-mask"></div> -->
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12">
+                        <div class="inner text-center mt--140">
+                            <h1 class="title display-one">Transform Your Legal Documentation with
+                                <br> <span class="header-caption">
+                                    <span class="cd-headline rotate-1">
+                                        <span class="cd-words-wrapper" style="width: 221px;">
+                                            <b class="theme-gradient is-visible">AI Precision</b>
+                                            <b class="theme-gradient is-hidden">AI Efficiency</b>
+                                            <b class="theme-gradient is-hidden">AI Innovation</b>
+                                        </span>
+                                    </span>
+                                </span> by AI Hack
+                            </h1>
+                            <p class="description">Experience the future of legal documentation. Use AI to generate
+                                flawless rent agreements instantly. Simplify your legal needs with cutting-edge
+                                technology.</p>
+                                <div class="form-group">
+                                    <form action="/form" method="get">
+                                        <label for="document_type">Choose a document type:</label>
+                                        <select name="doc_type" id="document_type">
+                                            <option value="rental">Residential Rental Agreement</option>
+                                            <option value="nda">Non-Disclosure Agreement</option>
+                                            <option value="poa">General Power of Attorney</option>
+                                        </select><br><br>
+                                        <input class='btn-default @@btnClass' type="submit" value="Start Generating">
+                                    </form>
+                                </div>
+                                
+                            <div class="inner-shape">
+                                <img src="{{ url_for('static', filename='assets/images/bg/icon-shape/icon-shape-one.png') }}" alt="Icon Shape" class="iconshape iconshape-one">
+                                <img src="{{ url_for('static', filename='assets/images/bg/icon-shape/icon-shape-two.png') }}" alt="Icon Shape" class="iconshape iconshape-two">
+                                <img src="{{ url_for('static', filename='assets/images/bg/icon-shape/icon-shape-three.png') }}" alt="Icon Shape" class="iconshape iconshape-three">
+                                <img src="{{ url_for('static', filename='assets/images/bg/icon-shape/icon-shape-four.png') }}" alt="Icon Shape" class="iconshape iconshape-four">
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-shape">
+                <img class="bg-shape-one" src="{{ url_for('static', filename='assets/images/bg/bg-shape-four.png') }}" alt="Bg Shape">
+                <img class="bg-shape-two" src="{{ url_for('static', filename='assets/images/bg/bg-shape-five.png') }}" alt="Bg Shape">
+            </div>            
+        </div>
+        <!-- End Slider Area  -->
+
+        <!-- Start Service__Style--one Area  -->
+        <div class="rainbow-service-area rainbow-section-gap rainbow-section-gapBottom-big">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title text-left" data-sal="slide-up" data-sal-duration="400"
+                            data-sal-delay="150">
+                            <h4 class="subtitle">
+                                <span class="theme-gradient">Assisting landlords and tenants</span>
+                            </h4>
+                            <h2 class="title mb--60">
+                                Create Legal Documents <br> Effortlessly with
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div
+                            class="service-wrapper rainbow-service-slider-actvation slick-grid-15 rainbow-slick-dot rainbow-gradient-arrows">
+                            <div class="slide-single-layout">
+                                <div class="rainbow-box-card card-style-default aiwave-service-default has-bg-shaped">
+                                    <div class="inner">
+                                        <div class="icon">
+                                            <img src="{{ url_for('static', filename='assets/images/icons/service-icon-01.svg') }}" alt="Service Icon">
+                                        </div>                                        
+                                        <div class="description centered-shape">
+                                            <h5 class="title">Automated Generation</h5>
+                                            <p class="desc">Quickly create accurate rent agreements tailored to your
+                                                needs without the hassle of manual drafting.</p>
+                                            <a class="read-more-btn" href="#">Explore More <span><i
+                                                        class="fa-sharp fa-solid fa-arrow-right"></i></span></a>
+                                        </div>
+                                    </div>
+                                    <div class="bg-shaped">
+                                        <img src="{{ url_for('static', filename='assets/images/service/bg.png') }}" alt="" class="bg">
+                                        <img src="{{ url_for('static', filename='assets/images/service/bg-hover.png') }}" alt="" class="bg-hover">
+                                    </div>                                    
+                                </div>
+                            </div>
+                            <div class="slide-single-layout">
+                                <div class="rainbow-box-card card-style-default aiwave-service-default has-bg-shaped">
+                                    <div class="inner">
+                                        <div class="icon">
+                                            <img src="{{ url_for('static', filename='assets/images/icons/service-icon-02.svg') }}" alt="Service Icon">
+                                        </div>                                        
+                                        <div class="description centered-shape">
+                                            <h5 class="title">User-Friendly Interface</h5>
+                                            <p class="desc">Our intuitive platform allows you to easily input details
+                                                and generate documents without legal expertise.</p>
+                                            <a class="read-more-btn" href="#">Explore More <span><i
+                                                        class="fa-sharp fa-solid fa-arrow-right"></i></span></a>
+                                        </div>
+                                    </div>
+                                    <div class="bg-shaped">
+                                        <img src="{{ url_for('static', filename='assets/images/service/bg.png') }}" alt="" class="bg">
+                                        <img src="{{ url_for('static', filename='assets/images/service/bg-hover.png') }}" alt="" class="bg-hover">
+                                    </div>                                    
+                                </div>
+                            </div>
+                            <div class="slide-single-layout">
+                                <div class="rainbow-box-card card-style-default aiwave-service-default has-bg-shaped">
+                                    <div class="inner">
+                                        <div class="icon">
+                                            <img src="{{ url_for('static', filename='assets/images/icons/service-icon-03.svg') }}" alt="Service Icon">
+                                        </div>                                        
+                                        <div class="description centered-shape">
+                                            <h5 class="title">Legal Compliance</h5>
+                                            <p class="desc">Ensure your rent agreements meet legal standards and are
+                                                compliant with current regulations.</p>
+                                            <a class="read-more-btn" href="#">Explore More <span><i
+                                                        class="fa-sharp fa-solid fa-arrow-right"></i></span></a>
+                                        </div>
+                                    </div>
+                                    <div class="bg-shaped">
+                                        <img src="{{ url_for('static', filename='assets/images/service/bg.png') }}" alt="" class="bg">
+                                        <img src="{{ url_for('static', filename='assets/images/service/bg-hover.png') }}" alt="" class="bg-hover">
+                                    </div>                                    
+                                </div>
+                            </div>
+                            <div class="slide-single-layout">
+                                <div class="rainbow-box-card card-style-default aiwave-service-default has-bg-shaped">
+                                    <div class="inner">
+                                        <div class="icon">
+                                            <img src="{{ url_for('static', filename='assets/images/icons/service-icon-01.svg') }}" alt="Service Icon">
+                                        </div>                                        
+                                        <div class="description centered-shape">
+                                            <h5 class="title">Time-Saving</h5>
+                                            <p class="desc">Generate detailed rent agreements in minutes, saving you
+                                                time and effort for more important tasks.</p>
+                                            <a class="read-more-btn" href="#">Explore More <span><i
+                                                        class="fa-sharp fa-solid fa-arrow-right"></i></span></a>
+                                        </div>
+                                    </div>
+                                    <div class="bg-shaped">
+                                        <img src="{{ url_for('static', filename='assets/images/service/bg.png') }}" alt="" class="bg">
+                                        <img src="{{ url_for('static', filename='assets/images/service/bg-hover.png') }}" alt="" class="bg-hover">
+                                    </div>                                    
+                                </div>
+                            </div>
+                            <div class="slide-single-layout">
+                                <div class="rainbow-box-card card-style-default aiwave-service-default has-bg-shaped">
+                                    <div class="inner">
+                                        <div class="icon">
+                                            <img src="{{ url_for('static', filename='assets/images/icons/service-icon-02.svg') }}" alt="Service Icon">
+                                        </div>                                        
+                                        <div class="description centered-shape">
+                                            <h5 class="title">Secure Storage</h5>
+                                            <p class="desc">Store your generated documents securely in our platform,
+                                                ensuring privacy and easy access.</p>
+                                            <a class="read-more-btn" href="#">Explore More <span><i
+                                                        class="fa-sharp fa-solid fa-arrow-right"></i></span></a>
+                                        </div>
+                                    </div>
+                                    <div class="bg-shaped">
+                                        <img src="{{ url_for('static', filename='assets/images/service/bg.png') }}" alt="" class="bg">
+                                        <img src="{{ url_for('static', filename='assets/images/service/bg-hover.png') }}" alt="" class="bg-hover">
+                                    </div>                                    
+                                </div>
+                            </div>
+                            <div class="slide-single-layout">
+                                <div class="rainbow-box-card card-style-default aiwave-service-default has-bg-shaped">
+                                    <div class="inner">
+                                        <div class="icon">
+                                            <img src="{{ url_for('static', filename='assets/images/icons/service-icon-03.svg') }}" alt="Service Icon">
+                                        </div>                                        
+                                        <div class="description centered-shape">
+                                            <h5 class="title">Customer Support</h5>
+                                            <p class="desc">Access our dedicated support team for any questions or
+                                                assistance needed during document generation.</p>
+                                            <a class="read-more-btn" href="#">Explore More <span><i
+                                                        class="fa-sharp fa-solid fa-arrow-right"></i></span></a>
+                                        </div>
+                                    </div>
+                                    <div class="bg-shaped">
+                                        <img src="{{ url_for('static', filename='assets/images/service/bg.png') }}" alt="" class="bg">
+                                        <img src="{{ url_for('static', filename='assets/images/service/bg-hover.png') }}" alt="" class="bg-hover">
+                                    </div>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Service__Style--one Area  -->
+
+
+        <!-- Start Advanced Tab Area -->
+        <div class="rainbow-advance-tab-area aiwave-bg-gradient rainbow-section-gap-big">
+            <div class="container">
+                <div class="html-tabs" data-tabs="true">
+                    <div class="row row--30">
+                        <div class="col-lg-12">
+                            <div class="tab-content">
+                                <div class="tab-pane fade show active advance-tab-content-1 right-top" id="home-3"
+                                    role="tabpanel" aria-labelledby="home-tab-3">
+                                    <div class="rainbow-splite-style">
+                                        <div class="split-wrapper">
+                                            <div class="row g-0 radius-10 align-items-center">
+                                                <div class="col-lg-12 col-xl-5 col-12">
+                                                    <div class="thumbnail">
+                                                        <img class="radius" src="{{ url_for('static', filename='assets/images/split/split-1.png') }}" alt="split Images">
+                                                    </div>                                                    
+                                                </div>
+                                                <div class="col-lg-12 col-xl-7 col-12">
+                                                    <div class="split-inner">
+                                                        <div class="subtitle">
+                                                            <span class="theme-gradient">How it Works</span>
+                                                        </div>
+                                                        <h2 class="title sal-animate" data-sal="slide-up"
+                                                            data-sal-duration="400" data-sal-delay="200">AI-Powered
+                                                            Document Generation</h2>
+                                                        <p class="description sal-animate" data-sal="slide-up"
+                                                            data-sal-duration="400" data-sal-delay="300">Follow these
+                                                            steps to generate your legal rent agreement using our AI
+                                                            technology:</p>
+                                                        <ol class="description sal-animate" data-sal="slide-up"
+                                                            data-sal-duration="400" data-sal-delay="300">
+                                                            <li>Provide your basic information: Enter your name,
+                                                                address, and contact details.</li>
+                                                            <li>Input tenant details: Fill in the tenant's name,
+                                                                address, and contact information.</li>
+                                                            <li>Specify the property: Describe the rental property,
+                                                                including address and key features.</li>
+                                                            <li>Set terms and conditions: Define the rental period,
+                                                                payment terms, and any specific conditions.</li>
+                                                            <li>Review and confirm: AI reviews the input for
+                                                                completeness and legal compliance.</li>
+                                                            <li>Generate the document: AI compiles the information into
+                                                                a legally formatted rent agreement.</li>
+                                                        </ol>
+                                                        <div class="view-more-button mt--35 sal-animate"
+                                                            data-sal="slide-up" data-sal-duration="400"
+                                                            data-sal-delay="400">
+                                                            <a class='btn-default color-blacked' href='contact.html'>Try
+                                                                It Now <i
+                                                                    class="fa-sharp fa-light fa-arrow-right ml--5"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade advance-tab-content-1" id="profile-3" role="tabpanel"
+                                    aria-labelledby="profile-tab-3">
+                                    <div class="rainbow-splite-style">
+                                        <div class="split-wrapper">
+                                            <div class="row g-0 radius-10 align-items-center">
+                                                <div class="col-lg-12 col-xl-5 col-12">
+                                                    <div class="thumbnail">
+                                                        <img class="radius" src="{{ url_for('static', filename='assets/images/split/split-4.png') }}" alt="split Images">
+                                                    </div>                                                    
+                                                </div>
+                                                <div class="col-lg-12 col-xl-7 col-12">
+                                                    <div class="split-inner">
+                                                        <div class="subtitle">
+                                                            <span class="theme-gradient">Enhancing Efficiency</span>
+                                                        </div>
+                                                        <h2 class="title sal-animate" data-sal="slide-up"
+                                                            data-sal-duration="400" data-sal-delay="200">Streamline Your
+                                                            Workflow</h2>
+                                                        <p class="description sal-animate" data-sal="slide-up"
+                                                            data-sal-duration="400" data-sal-delay="300">Experience the
+                                                            ease of our AI-driven document generation process. By
+                                                            automating the tedious aspects, we help you focus on what
+                                                            matters most.</p>
+                                                        <div class="view-more-button mt--35 sal-animate"
+                                                            data-sal="slide-up" data-sal-duration="400"
+                                                            data-sal-delay="400">
+                                                            <a class='btn-default color-blacked' href='contact.html'>Try
+                                                                It Now <i
+                                                                    class="fa-sharp fa-light fa-arrow-right ml--5"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade advance-tab-content-1" id="contact-3" role="tabpanel"
+                                    aria-labelledby="contact-tab-3">
+                                    <div class="rainbow-splite-style">
+                                        <div class="split-wrapper">
+                                            <div class="row g-0 radius-10 align-items-center">
+                                                <div class="col-lg-12 col-xl-5 col-12">
+                                                    <div class="thumbnail">
+                                                        <img class="radius" src="{{ url_for('static', filename='assets/images/split/split-3.png') }}" alt="split Images">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-xl-7 col-12">
+                                                    <div class="split-inner">
+                                                        <div class="subtitle">
+                                                            <span class="theme-gradient">Ensuring Security</span>
+                                                        </div>
+                                                        <h2 class="title sal-animate" data-sal="slide-up"
+                                                            data-sal-duration="400" data-sal-delay="200">Protecting Your
+                                                            Data</h2>
+                                                        <p class="description sal-animate" data-sal="slide-up"
+                                                            data-sal-duration="400" data-sal-delay="300">Our platform
+                                                            uses advanced AI to securely handle your information,
+                                                            ensuring that your data is protected throughout the document
+                                                            generation process.</p>
+                                                        <div class="view-more-button mt--35 sal-animate"
+                                                            data-sal="slide-up" data-sal-duration="400"
+                                                            data-sal-delay="400">
+                                                            <a class='btn-default color-blacked' href='contact.html'>Try
+                                                                It Now <i
+                                                                    class="fa-sharp fa-light fa-arrow-right ml--5"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade advance-tab-content-1" id="explore-3" role="tabpanel"
+                                    aria-labelledby="explore-tab-3">
+                                    <div class="rainbow-splite-style">
+                                        <div class="split-wrapper">
+                                            <div class="row g-0 radius-10 align-items-center">
+                                                <div class="col-lg-12 col-xl-5 col-12">
+                                                    <div class="thumbnail">
+                                                        <img class="radius" src="{{ url_for('static', filename='assets/images/split/split-5.png') }}" alt="split Images">
+                                                    </div>                                                    
+                                                </div>
+                                                <div class="col-lg-12 col-xl-7 col-12">
+                                                    <div class="split-inner">
+                                                        <div class="subtitle">
+                                                            <span class="theme-gradient">Perfecting the Process</span>
+                                                        </div>
+                                                        <h2 class="title sal-animate" data-sal="slide-up"
+                                                            data-sal-duration="400" data-sal-delay="200">Seamless
+                                                            Document Creation</h2>
+                                                        <p class="description sal-animate" data-sal="slide-up"
+                                                            data-sal-duration="400" data-sal-delay="300">Our AI
+                                                            streamlines the creation of rent agreements by intelligently
+                                                            placing your inputs into a legally sound format, ensuring
+                                                            precision and compliance.</p>
+                                                        <div class="view-more-button mt--35 sal-animate"
+                                                            data-sal="slide-up" data-sal-duration="400"
+                                                            data-sal-delay="400">
+                                                            <a class='btn-default color-blacked' href='contact.html'>Try
+                                                                It Now <i
+                                                                    class="fa-sharp fa-light fa-arrow-right ml--5"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 mt--60">
+                            <div class="advance-tab-button advance-tab-button-1 right-top">
+                                <ul class="nav nav-tabs tab-button-list" id="myTab-3" role="tablist">
+                                    <li class="col-lg-3 nav-item" role="presentation">
+                                        <a href="#" class="nav-link tab-button active" id="home-tab-3"
+                                            data-bs-toggle="tab" data-bs-target="#home-3" role="tab"
+                                            aria-controls="home-3" aria-selected="true">
+                                            <div class="tab">
+                                                <div class="count-text">
+                                                    <span class="theme-gradient">01</span>
+                                                </div>
+                                                <h4 class="title">AI-Powered Creation</h4>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="col-lg-3 nav-item" role="presentation">
+                                        <a href="#" class="nav-link tab-button" id="profile-tab-3" data-bs-toggle="tab"
+                                            data-bs-target="#profile-3" role="tab" aria-controls="profile-3"
+                                            aria-selected="false">
+                                            <div class="tab">
+                                                <div class="count-text">
+                                                    <span class="theme-gradient">02</span>
+                                                </div>
+                                                <h4 class="title">Workflow Efficiency</h4>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="col-lg-3 nav-item" role="presentation">
+                                        <a href="#" class="nav-link tab-button" id="contact-tab-3" data-bs-toggle="tab"
+                                            data-bs-target="#contact-3" role="tab" aria-controls="contact-3"
+                                            aria-selected="false">
+                                            <div class="tab">
+                                                <div class="count-text">
+                                                    <span class="theme-gradient">03</span>
+                                                </div>
+                                                <h4 class="title">Data Security</h4>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="col-lg-3 nav-item" role="presentation">
+                                        <a href="#" class="nav-link tab-button" id="explore-tab-3" data-bs-toggle="tab"
+                                            data-bs-target="#explore-3" role="tab" aria-controls="explore-3"
+                                            aria-selected="false">
+                                            <div class="tab">
+                                                <div class="count-text">
+                                                    <span class="theme-gradient">04</span>
+                                                </div>
+                                                <h4 class="title">Seamless Creation</h4>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-shape">
+                <img src="{{ url_for('static', filename='assets/images/bg/split-bg-shape.png') }}" alt="Bg Shape">
+            </div>            
+        </div>
+        <!-- End Advanced Tab Area -->
+
+
+
+
+
+        <!-- Start CTA Style-one Area  -->
+        <div class="rainbow-rn-cta">
+            <div class="container">
+                <div class="row row--0 align-items-center content-wrapper">
+                    <div class="col-lg-8">
+                        <div class="inner">
+                            <div class="content text-left">
+                                <h4 class="title sal-animate" data-sal="slide-up" data-sal-duration="400"
+                                    data-sal-delay="200">Join our aI Experts community</h4>
+                                <p class="sal-animate" data-sal="slide-up" data-sal-duration="400" data-sal-delay="300">
+                                    Meet and learn from 80+ creators & companies who share how thay use AI to create
+                                    better content at lightning speed.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="right-content">
+                            <div class="call-to-btn text-start text-lg-end sal-animate" data-sal="slide-up"
+                                data-sal-duration="400" data-sal-delay="400">
+                                <div class="team-image">
+                                    <img src="{{ url_for('static', filename='assets/images/cta-img/team-01.png') }}" alt="Group Image">
+                                </div>                                
+                                <a class="btn-default" href="#">Join Now Today Free</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-shape">
+                        <img src="{{ url_for('static', filename='assets/images/cta-img/bg-shape-01.png') }}" alt="BG Shape">
+                    </div>                    
+                </div>
+            </div>
+        </div>
+        <!-- End CTA Style-one Area  -->
+
+        <!-- Pricing Part -->
+        <div class="aiwave-pricing-area wrapper rainbow-section-gap-big">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title text-center" data-sal="slide-up" data-sal-duration="400"
+                            data-sal-delay="150">
+                            <h4 class="subtitle">
+                                <span class="theme-gradient">Pricing</span>
+                            </h4>
+                            <h2 class="title w-600 mb--40">
+                                Pricing plans for everyone
+                            </h2>
+                        </div>
+
+                        <nav class="aiwave-tab">
+                            <div class="tab-btn-grp nav nav-tabs text-center justify-content-center" id="nav-tab"
+                                role="tablist">
+                                <button class="nav-link" id="nav-home-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
+                                    aria-selected="false">
+                                    Monthly
+                                </button>
+                                <button class="nav-link with-badge active" id="nav-profile-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
+                                    aria-selected="true">
+                                    Yearly
+                                    <span class="rainbow-badge-card badge-border">-10%</span>
+                                </button>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <div class="tab-content p-0 bg-transparent border-0 border bg-light" id="nav-tabContent">
+                    <div class="tab-pane fade" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                        <div class="row row--15 mt_dec--40">
+                            <div class="col-xl-4 col-lg-6 col-md-6 col-12 mt--40">
+                                <div class="rainbow-pricing style-aiwave">
+                                    <div class="pricing-table-inner">
+                                        <div class="pricing-top">
+                                            <div class="pricing-header">
+                                                <div class="icon">
+                                                    <i class="fa-regular fa-circle-radiation"></i>
+                                                </div>
+                                                <h4 class="title color-var-one">Basic</h4>
+                                                <p class="subtitle">For individuals</p>
+                                                <div class="pricing">
+                                                    <span class="price-text">Free</span>
+                                                </div>
+                                            </div>
+                                            <div class="pricing-body">
+                                                <div class="features-section">
+                                                    <h6>Features</h6>
+                                                    <ul class="list-style--1">
+                                                        <li>
+                                                            <i class="fa-regular fa-circle-check"></i> 3 credits per
+                                                            month
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa-sharp fa-regular fa-minus-circle"></i> No
+                                                            additional features
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="pricing-footer">
+                                            <a class="btn-default btn-border" href="#">Get Started</a>
+                                            <p class="bottom-text">Limited Offer</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-6 col-md-6 col-12 mt--40">
+                                <div class="rainbow-pricing style-aiwave active">
+                                    <div class="pricing-table-inner">
+                                        <div class="pricing-top">
+                                            <div class="pricing-header">
+                                                <div class="icon">
+                                                    <i class="fa-sharp fa-regular fa-flower"></i>
+                                                </div>
+                                                <h4 class="title color-var-two">Standard</h4>
+                                                <p class="subtitle">For small teams</p>
+                                                <div class="pricing">
+                                                    <span class="price-text">₹200</span>
+                                                    <span class="text">/Per Month</span>
+                                                </div>
+                                            </div>
+                                            <div class="pricing-body">
+                                                <div class="features-section">
+                                                    <h6>Features</h6>
+                                                    <ul class="list-style--1">
+                                                        <li>
+                                                            <i class="fa-regular fa-circle-check"></i> Generate up to 20
+                                                            documents per month
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa-regular fa-circle-check"></i> Basic support
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="pricing-footer">
+                                            <a class="btn-default color-blacked" href="#">Get Started</a>
+                                            <p class="bottom-text">Limited Offer</p>
+                                        </div>
+                                    </div>
+                                    <div class="feature-badge">Best Value</div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-6 col-md-6 col-12 mt--40">
+                                <div class="rainbow-pricing style-aiwave">
+                                    <div class="pricing-table-inner">
+                                        <div class="pricing-top">
+                                            <div class="pricing-header">
+                                                <div class="icon">
+                                                    <i class="fa-sharp fa-regular fa-waveform-lines"></i>
+                                                </div>
+                                                <h4 class="title color-var-three">Enterprise</h4>
+                                                <p class="subtitle">For large teams & corporations</p>
+                                                <div class="pricing">
+                                                    <span class="price-text">₹400</span>
+                                                    <span class="text">/Per Month</span>
+                                                </div>
+                                            </div>
+                                            <div class="pricing-body">
+                                                <div class="features-section">
+                                                    <h6>Features</h6>
+                                                    <ul class="list-style--1">
+                                                        <li>
+                                                            <i class="fa-regular fa-circle-check"></i> Generate up to 3
+                                                            documents per day
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa-regular fa-circle-check"></i> Priority support
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="pricing-footer">
+                                            <a class="btn-default btn-border" href="#">Get Started</a>
+                                            <p class="bottom-text">Limited Offer</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade active show" id="nav-profile" role="tabpanel"
+                        aria-labelledby="nav-profile-tab">
+                        <div class="row row--15 mt_dec--40">
+                            <div class="col-xl-4 col-lg-6 col-md-6 col-12 mt--40">
+                                <div class="rainbow-pricing style-aiwave">
+                                    <div class="pricing-table-inner">
+                                        <div class="pricing-top">
+                                            <div class="pricing-header">
+                                                <div class="icon">
+                                                    <i class="fa-regular fa-circle-radiation"></i>
+                                                </div>
+                                                <h4 class="title color-var-one">Basic</h4>
+                                                <p class="subtitle">For individuals</p>
+                                                <div class="pricing">
+                                                    <span class="price-text">Free</span>
+                                                </div>
+                                            </div>
+                                            <div class="pricing-body">
+                                                <div class="features-section">
+                                                    <h6>Features</h6>
+                                                    <ul class="list-style--1">
+                                                        <li>
+                                                            <i class="fa-regular fa-circle-check"></i> 3 credits per
+                                                            month
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa-sharp fa-regular fa-minus-circle"></i> No
+                                                            additional features
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="pricing-footer">
+                                            <a class="btn-default btn-border" href="#">Get Started</a>
+                                            <p class="bottom-text">Limited Offer</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Standard Plan -->
+                            <div class="col-xl-4 col-lg-6 col-md-6 col-12 mt--40">
+                                <div class="rainbow-pricing style-aiwave active">
+                                    <div class="pricing-table-inner">
+                                        <div class="pricing-top">
+                                            <div class="pricing-header">
+                                                <div class="icon">
+                                                    <i class="fa-sharp fa-regular fa-flower"></i>
+                                                </div>
+                                                <h4 class="title color-var-two">Standard</h4>
+                                                <p class="subtitle">For small teams</p>
+                                                <div class="pricing">
+                                                    <span class="price-text">₹2000</span>
+                                                    <span class="text">/Per Year</span>
+                                                </div>
+                                            </div>
+                                            <div class="pricing-body">
+                                                <div class="features-section">
+                                                    <h6>Features</h6>
+                                                    <ul class="list-style--1">
+                                                        <li>
+                                                            <i class="fa-regular fa-circle-check"></i> Generate up to 20
+                                                            documents per month
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa-regular fa-circle-check"></i> Basic support
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="pricing-footer">
+                                            <a class="btn-default color-blacked" href="#">Get Started</a>
+                                            <p class="bottom-text">Limited Offer</p>
+                                        </div>
+                                    </div>
+                                    <div class="feature-badge">Best Value</div>
+                                </div>
+                            </div>
+
+                            <!-- Enterprise Plan -->
+                            <div class="col-xl-4 col-lg-6 col-md-6 col-12 mt--40">
+                                <div class="rainbow-pricing style-aiwave">
+                                    <div class="pricing-table-inner">
+                                        <div class="pricing-top">
+                                            <div class="pricing-header">
+                                                <div class="icon">
+                                                    <i class="fa-sharp fa-regular fa-waveform-lines"></i>
+                                                </div>
+                                                <h4 class="title color-var-three">Enterprise</h4>
+                                                <p class="subtitle">For large teams & corporations</p>
+                                                <div class="pricing">
+                                                    <span class="price-text">₹4000</span>
+                                                    <span class="text">/Per Year</span>
+                                                </div>
+                                            </div>
+                                            <div class="pricing-body">
+                                                <div class="features-section">
+                                                    <h6>Features</h6>
+                                                    <ul class="list-style--1">
+                                                        <li>
+                                                            <i class="fa-regular fa-circle-check"></i> Generate up to 3
+                                                            documents per day
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa-regular fa-circle-check"></i> Priority support
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="pricing-footer">
+                                            <a class="btn-default btn-border" href="#">Get Started</a>
+                                            <p class="bottom-text">Limited Offer</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Service Area -->
+        <div class="aiwave-service-area rainbow-section-gap">
+            <div class="container">
+                <div class="row row--15 service-wrapper">
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 sal-animate" data-sal="slide-up"
+                        data-sal-duration="700">
+                        <div class="service service__style--1 aiwave-style text-center">
+                            <div class="icon">
+                                <img src="{{ url_for('static', filename='assets/images/service/service-icon-01.png') }}" alt="Service Image">
+                            </div>                            
+                            <div class="content">
+                                <h4 class="title w-600">100% No-Risk, Money Back Guarantee!</h4>
+                                <p class="description b1 mb--0">Refunds will be issued within period of 14 days from the
+                                    purchase date</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 sal-animate" data-sal="slide-up"
+                        data-sal-duration="700" data-sal-delay="100">
+                        <div class="service service__style--1 aiwave-style text-center">
+                            <div class="icon">
+                                <img src="{{ url_for('static', filename='assets/images/service/service-icon-02.png') }}" alt="Service Image">
+                            </div>                            
+                            <div class="content">
+                                <h4 class="title w-600">Upgrade or Cancel Anytime</h4>
+                                <p class="description b1 mb--0">Passages there are many variations variations of of
+                                    Lorem Ipsum available.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 sal-animate" data-sal="slide-up"
+                        data-sal-duration="700" data-sal-delay="200">
+                        <div class="service service__style--1 aiwave-style text-center">
+                            <div class="icon">
+                                <img src="{{ url_for('static', filename='assets/images/service/service-icon-03.png') }}" alt="Service Image">
+                            </div>
+                            <div class="content">
+                                <h4 class="title w-600">Not sure yet, try the free version</h4>
+                                <p class="description b1 mb--0">Refunds will be issued within period of 14 days from the
+                                    purchase date</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Start Footer Area  -->
+        <footer class="rainbow-footer footer-style-default footer-style-3 position-relative">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div class="rainbow-footer-widget">
+                                <div class="logo footer-logo">
+                                    <a href='index.html'>
+                                        <img class="logo-light" src="{{ url_for('static', filename='assets/images/Legal-Sarthi_LOGO.png') }}" alt="ChatBot Logo">
+
+                                    </a>
+                                </div>
+                                <p class="b1 desc-text">It has long been known that a reader's <br> attention will be
+                                    diverted from </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-sm-6 col-12">
+                            <div class="rainbow-footer-widget">
+                                <div class="widget-menu-bottom">
+                                    <h4 class="title">Quick Links</h4>
+                                    <div class="inner">
+                                        <ul class="footer-link link-hover">
+                                            <li><a href="index.html">Home</a></li>
+                                            <li><a href='generate.html'>Generate</a></li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                            <div class="rainbow-footer-widget">
+                                <div class="widget-menu-top">
+                                    <h4 class="title">Services</h4>
+                                    <div class="inner">
+                                        <li><a href='generate.html'>Rent Agreement Generator</a></li>
+                                        <li><a href='#'>Will Power Generator</a></li>
+                                        <li><a href='#'>Power of Attorney Generator</a>
+                                        </li>
+                                        <li><a href='#'>Any Other Legal Document
+                                                Generator</a></li>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                            <div class="rainbow-footer-widget">
+                                <div class="widget-menu-top">
+                                    <h4 class="title">Contact</h4>
+                                    <div class="inner">
+                                        <ul class="footer-link contact-link">
+                                            <li><i class="contact-icon fa-regular fa-location-dot"></i><a href="#">Gotri, Vadodara - 390021</a></li>
+                                            <li><i class="contact-icon fa-sharp fa-regular fa-envelope"></i><a
+                                                    href="#">legalsarthi@gmail.com</a></li>
+                                            <li><i class="contact-icon fa-regular fa-phone"></i><a href="tel:919106023997">+91 9106023997</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer Area  -->
+        <!-- Start Copy Right Area  -->
+        <div class="copyright-area copyright-style-one">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-8 col-sm-12 col-12">
+                        <div class="copyright-left">
+                            <ul class="ft-menu link-hover">
+                                <li>
+                                    Designed & Developed by <a href='https://neuralbee.tech/' target="_blank">NeuralBee</a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-4 col-sm-12 col-12">
+                        <div class="copyright-right text-center text-lg-end">
+                            <p class="copyright-text">Copyright © 2024 <a
+                                    href="#"
+                                    class="btn-read-more"><span>LegalSarthi</span></a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Copy Right Area  -->
+        <div class="rbt-progress-parent">
+            <svg class="rbt-back-circle svg-inner" width="100%" height="100%" viewBox="-1 -1 102 102">
+                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+            </svg>
+        </div>
+    </main>
+    <!-- All Scripts  -->
+
+    <!-- JS
+    ============================================ -->
+    <script src="{{ url_for('static', filename='assets/js/vendor/modernizr.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/vendor/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/vendor/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/vendor/waypoint.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/vendor/wow.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/vendor/counterup.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/vendor/sal.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/vendor/slick.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/vendor/text-type.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/vendor/prism.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/vendor/jquery.style.swicher.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/vendor/bootstrap-select.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/vendor/backto-top.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/vendor/js.cookie.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/vendor/jquery-one-page-nav.js') }}"></script>
+<!-- Main JS -->
+<script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+
+
+
+</html>
