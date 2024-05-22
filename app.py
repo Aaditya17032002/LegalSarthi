@@ -149,6 +149,3 @@ def download_document():
 def contact():
     return render_template('contact.html')
 
-
-if __name__ == '__main__':
-    socketio.run(app, debug=True)
