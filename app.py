@@ -25,14 +25,14 @@ def home():
 
 @app.route('/form', methods=['GET'])
 def show_form():
-    doc_type = request.args.get('doc_type')
-    document_path = DOCUMENTS.get(doc_type)
-    if not document_path:
-        return 'Document not found.', 404
-
+    doc_type = request.args.get('doc_type', 'rental')  # Ensure 'rental' is the default
+    document_path = DOCUMENTS.get(doc_type, 'residential-rental-agreement-format.docx')  # Fallback to 'rental' if not found
     document = Document(document_path)
+    # Assume extract_placeholders function exists to get placeholders from the document
     placeholders = extract_placeholders(document)
-    return render_template("{{ url_for('show_form', doc_type='rental') }}", placeholders=placeholders, doc_type=doc_type)
+    return render_template('generate.html', placeholders=placeholders, doc_type=doc_type)
+
+
 
 def extract_placeholders(document):
     placeholders = []
