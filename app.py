@@ -1,5 +1,6 @@
 import io,time
 import os
+import uuid
 from flask import Flask, request, render_template, send_file, send_from_directory, session, redirect, url_for,jsonify
 from flask_socketio import SocketIO, emit
 from docx import Document
@@ -104,16 +105,16 @@ def generate_document():
 
     replace_text(doc, replacements)
 
-    # Instead of saving to disk, save to a BytesIO object
-    file_stream = io.BytesIO()
-    doc.save(file_stream)
-    file_stream.seek(0)
+# Save the document to a temporary file
+    temp_path = f'{uuid.uuid4()}.docx'  # Ensure this directory exists and is writable
+    doc.save(temp_path)
 
-    # Store in session or another appropriate place
-    session['generated_doc'] = file_stream.getvalue()
+    # Store only the path in the session
+    session['generated_doc_path'] = temp_path
 
     # Redirect to the stream page
     return redirect(url_for('stream_content'))
+
 
 
 @app.route('/stream_content')
@@ -154,9 +155,13 @@ def get_full_text(doc):
 
 @app.route('/download_document')
 def download_document():
-    file_stream = io.BytesIO(session.get('generated_doc', b''))
-    return send_file(file_stream, attachment_filename="Generated_Document.docx",
-                     as_attachment=True, mimetype='application/vnd.openxmlformats-officedocument.wordprocessingml.document')
+    temp_path = session.get('generated_doc_path')
+    if not temp_path or not os.path.exists(temp_path):
+        return "No content available.", 404
+
+    return send_file(temp_path, attachment_filename="Generated_Document.docx",
+                     as_attachment=True, mimetype='application/vnd.openxmlformats-officedocument.wordprocessingml.document', 
+                     as_attachment=True, on_close=lambda: os.remove(temp_path))
 
 @app.route('/contact')
 def contact():
