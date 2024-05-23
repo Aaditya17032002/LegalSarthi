@@ -1,10 +1,11 @@
 import io,time
 import os
-from flask import Flask, request, render_template, send_file, send_from_directory, session, redirect, url_for
+from flask import Flask, request, render_template, send_file, send_from_directory, session, redirect, url_for,jsonify
 from flask_socketio import SocketIO, emit
 from docx import Document
 import logging
 from docx.enum.text import WD_COLOR_INDEX
+import traceback
 
 
 app = Flask(__name__)
@@ -25,12 +26,15 @@ def home():
 
 @app.route('/form', methods=['GET'])
 def show_form():
-    doc_type = request.args.get('doc_type', 'rental')  # Ensure 'rental' is the default
-    document_path = DOCUMENTS.get(doc_type, 'residential-rental-agreement-format.docx')  # Fallback to 'rental' if not found
-    document = Document(document_path)
-    # Assume extract_placeholders function exists to get placeholders from the document
-    placeholders = extract_placeholders(document)
-    return render_template('generate.html', placeholders=placeholders, doc_type=doc_type)
+    try:
+        doc_type = request.args.get('doc_type', 'rental')
+        document_path = DOCUMENTS.get(doc_type, 'residential-rental-agreement-format.docx')
+        document = Document(document_path)
+        placeholders = extract_placeholders(document)
+        return render_template('generate.html', placeholders=placeholders, doc_type=doc_type)
+    except Exception as e:
+        traceback.print_exc()  # Print error to stderr (check your logs)
+        return jsonify({"error": str(e)}), 500  # Return JSON error for debugging
 
 
 
