@@ -160,8 +160,8 @@ def download_document():
         return "No content available.", 404
 
     return send_file(temp_path, attachment_filename="Generated_Document.docx",
-                     as_attachment=True, mimetype='application/vnd.openxmlformats-officedocument.wordprocessingml.document', 
-                     as_attachment=True, on_close=lambda: os.remove(temp_path))
+                     as_attachment=True, mimetype='application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+                     on_close=lambda: os.remove(temp_path))
 
 @app.route('/contact')
 def contact():
