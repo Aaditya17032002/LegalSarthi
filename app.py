@@ -6,6 +6,7 @@ from docx import Document
 import logging
 from docx.enum.text import WD_COLOR_INDEX
 import traceback
+from flask_session import Session
 
 
 app = Flask(__name__)
