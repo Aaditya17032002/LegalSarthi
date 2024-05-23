@@ -108,9 +108,9 @@
 
                 <div class="content">
                     <ul class="mainmenu">
-                        <li><a href='index.html'>Home</a></li>
-                        <li><a href='generate.html'>Generate</a></li>
-                        <li><a href='contact.html'>Contact</a></li>
+                        <li><a href="{{ url_for('home') }}">Home</a></li>
+    <li><a href="{{ url_for('show_form', doc_type='rental') }}">Generate</a></li>
+    <li><a href="{{ url_for('contact') }}">Contact</a></li></ul>
                     </ul>
 
                 </div>
