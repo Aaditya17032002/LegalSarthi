@@ -31,7 +31,7 @@
                 <div class="row align-items-center row--0">
                     <div class="col-lg-2 col-md-6 col-6">
                         <div class="logo">
-                            <a href='index.html'>
+                            <a href="{{ url_for('home') }}">
                                 <img class="logo-light" src="{{ url_for('static', filename='assets/images/Legal-Sarthi_LOGO.png') }}" alt="ChatBot Logo">
 
                             </a>
@@ -77,7 +77,7 @@
             <div class="inner-popup">
                 <div class="header-top">
                     <div class="logo">
-                        <a href='index.html'>
+                        <a href="{{ url_for('home') }}">
                             <img class="logo-light" src="{{ url_for('static', filename='assets/images/Legal-Sarthi_LOGO.png') }}" alt="ChatBot Logo">
 
                         </a>
@@ -100,7 +100,7 @@
 
                 <!-- Start Header Btn  -->
                 <div class="header-btn d-block d-md-none">
-                    <a class='btn-default @@btnClass' href='generate.html' target='_blank'>Get Started Free</a>
+                    <a class='btn-default @@btnClass' href="{{ url_for('show_form', doc_type='rental') }}" target='_blank'>Get Started Free</a>
                 </div>
                 <!-- End Header Btn  -->
             </div>
@@ -920,7 +920,7 @@
                         <div class="col-lg-3 col-md-6 col-sm-12 col-12">
                             <div class="rainbow-footer-widget">
                                 <div class="logo footer-logo">
-                                    <a href='index.html'>
+                                    <a href="{{ url_for('home') }}">
                                         <img class="logo-light" src="{{ url_for('static', filename='assets/images/Legal-Sarthi_LOGO.png') }}" alt="ChatBot Logo">
 
                                     </a>
@@ -935,9 +935,9 @@
                                     <h4 class="title">Quick Links</h4>
                                     <div class="inner">
                                         <ul class="footer-link link-hover">
-                                            <li><a href="index.html">Home</a></li>
-                                            <li><a href='generate.html'>Generate</a></li>
-                                            <li><a href="contact.html">Contact</a></li>
+                                            <li><a href="{{ url_for('home') }}">Home</a></li>
+                                            <li><a href="{{ url_for('show_form', doc_type='rental') }}">Generate</a></li>
+                                            <li><a href="{{ url_for('contact') }}">Contact</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -948,7 +948,7 @@
                                 <div class="widget-menu-top">
                                     <h4 class="title">Services</h4>
                                     <div class="inner">
-                                        <li><a href='generate.html'>Rent Agreement Generator</a></li>
+                                        <li><a href="{{ url_for('show_form', doc_type='rental') }}">Rent Agreement Generator</a></li>
                                         <li><a href='#'>Will Power Generator</a></li>
                                         <li><a href='#'>Power of Attorney Generator</a>
                                         </li>

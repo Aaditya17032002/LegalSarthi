@@ -21,7 +21,7 @@ DOCUMENTS = {
 
 @app.route('/')
 def home():
-    return render_template('index.html', documents=DOCUMENTS)
+    return render_template("{{ url_for('home') }}", documents=DOCUMENTS)
 
 @app.route('/form', methods=['GET'])
 def show_form():
@@ -32,7 +32,7 @@ def show_form():
 
     document = Document(document_path)
     placeholders = extract_placeholders(document)
-    return render_template('generate.html', placeholders=placeholders, doc_type=doc_type)
+    return render_template("{{ url_for('show_form', doc_type='rental') }}", placeholders=placeholders, doc_type=doc_type)
 
 def extract_placeholders(document):
     placeholders = []
