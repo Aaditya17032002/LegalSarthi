@@ -57,10 +57,9 @@
                     <div class="col-lg-8 d-none d-lg-block">
                         <nav class="mainmenu-nav d-none d-lg-flex justify-content-center">
                             <ul class="mainmenu">
-    <li><a href="{{ url_for('home') }}">Home</a></li>
-    <li><a href="{{ url_for('show_form') }}">Generate</a></li>
-    <li><a href="{{ url_for('contact') }}">Contact</a></li>
-</ul>
+<li><a href="{{ url_for('home') }}">Home</a></li>
+    <li><a href="{{ url_for('show_form', doc_type='rental') }}">Generate</a></li>
+    <li><a href="{{ url_for('contact') }}">Contact</a></li></ul>
 
                         </nav>
                     </div>
