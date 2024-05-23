@@ -22,7 +22,7 @@ DOCUMENTS = {
 
 @app.route('/')
 def home():
-    return render_template("{{ url_for('home') }}", documents=DOCUMENTS)
+    return render_template("index.html", documents=DOCUMENTS)
 
 @app.route('/form', methods=['GET'])
 def show_form():
