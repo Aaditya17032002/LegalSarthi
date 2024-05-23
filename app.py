@@ -100,15 +100,17 @@ def generate_document():
 
     replace_text(doc, replacements)
 
-    # Save the modified document locally
-    output_filename = 'Generated_Document.docx'
-    doc.save(output_filename)
+    # Instead of saving to disk, save to a BytesIO object
+    file_stream = io.BytesIO()
+    doc.save(file_stream)
+    file_stream.seek(0)
 
-    # Store only the filename in session
-    session['output_filename'] = output_filename
+    # Store in session or another appropriate place
+    session['generated_doc'] = file_stream.getvalue()
 
-    # Redirect to a new route that will handle the streaming
+    # Redirect to the stream page
     return redirect(url_for('stream_content'))
+
 
 @app.route('/stream_content')
 def stream_content():
@@ -148,8 +150,10 @@ def get_full_text(doc):
 
 @app.route('/download_document')
 def download_document():
-    output_filename = session.get('output_filename', 'Generated_Document.docx')
-    return send_from_directory(directory=os.getcwd(), path=output_filename, as_attachment=True)
+    file_stream = io.BytesIO(session.get('generated_doc', b''))
+    return send_file(file_stream, attachment_filename="Generated_Document.docx",
+                     as_attachment=True, mimetype='application/vnd.openxmlformats-officedocument.wordprocessingml.document')
+
 @app.route('/contact')
 def contact():
     return render_template('contact.html')
