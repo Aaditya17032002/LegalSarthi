@@ -10,7 +10,10 @@ import traceback
 
 app = Flask(__name__)
 socketio = SocketIO(app)
-app.secret_key = 'supersecretkey'  # Replace with a real secret key
+# Configure the secret key and the session type
+app.config['SECRET_KEY'] = 'your_secret_key'
+app.config['SESSION_TYPE'] = 'filesystem'  # or 'redis', 'memcached', etc.
+Session(app)  # Replace with a real secret key
 socketio = SocketIO(app)
 logging.basicConfig(level=logging.DEBUG)
 

@@ -2,3 +2,4 @@ Flask==2.0.1
 Flask-SocketIO==5.1.1
 python-docx==0.8.11
 Werkzeug==2.0.3  # Example, check Flask 2.1.2 dependencies for the exact required version
+Flask-Session==0.4.0
